@@ -10,6 +10,16 @@ import plotly.graph_objs as go
 ticker = "0P0000WLAC.F"
 data = yf.download(tickers=ticker, period="5y", interval="1wk")
 
+# slice from the investment date
+df = data["2019-11-20":]
+
+# add a performance column w.r.t. the investment date
+perf = 100 * df["clot"] / df["clot"][0]
+col_names = df.columns.append("perf")
+df_final = pd.concat([df, perf], axis=1, names=col_names)
+
+# TODO change to a line plot
+
 # declare figure
 fig = go.Figure()
 
