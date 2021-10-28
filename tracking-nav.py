@@ -1,5 +1,7 @@
 # https://towardsdatascience.com/python-how-to-get-live-market-data-less-than-0-1-second-lag-c85ee280ed93
 
+# Candlestick graph of the evolution of the fund's NAV since the investment date
+
 # useful packages
 import numpy as np
 import pandas as pd
