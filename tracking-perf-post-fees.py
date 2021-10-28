@@ -28,5 +28,19 @@ fig.update_layout(
     xaxis_title="Date",
     yaxis_title="Performance (%)",
 )
+fig.update_layout(
+    shapes=[
+        dict(
+            type="line",
+            yref="y",
+            y0=100,
+            y1=100,  # adding a horizontal line at Y = 1
+            xref="paper",
+            x0=0,
+            x1=1,
+        )
+    ]
+)
+fig.update_xaxes(rangeslider_visible=True)
 
 fig.show()
