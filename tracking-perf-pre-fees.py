@@ -10,7 +10,7 @@ import plotly.express as px
 
 # loading data
 ticker = "0P0000WLAC.F"
-data = yf.download(tickers=ticker, period="5y", interval="1wk")
+data = yf.download(tickers=ticker, period="5y", interval="1d")
 
 data.drop(data.columns[[0, 1, 2, 4, 5]], axis=1, inplace=True)
 
