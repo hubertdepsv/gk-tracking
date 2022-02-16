@@ -19,7 +19,7 @@ df = data["2019-11-20":]
 
 # compute performance columns
 post_fee_price = 165.00396
-df["post_fee_perf"] = 100 * df["Close"] / post_fee_price
+df.loc[:, "post_fee_perf"] = 100 * df.loc[:, "Close"] / post_fee_price
 
 fig = px.line(df, x=df.index, y="post_fee_perf")
 
